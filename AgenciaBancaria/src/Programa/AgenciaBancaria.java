@@ -1,8 +1,6 @@
 package Programa;
 
 import java.util.ArrayList;
-
-
 import javax.swing.JOptionPane;
 
 public class AgenciaBancaria {
@@ -53,9 +51,7 @@ public class AgenciaBancaria {
 		Cliente cliente = new Cliente();
 
 		cliente.setNome(JOptionPane.showInputDialog("Nome:"));
-
 		cliente.setCPF(JOptionPane.showInputDialog("CPF:"));
-
 		cliente.setEmail(JOptionPane.showInputDialog("Email:"));
 
 		Conta conta = new Conta(cliente);
@@ -96,9 +92,9 @@ public class AgenciaBancaria {
 
 	public static void sacar() {
 		int numeroConta = Integer.parseInt(JOptionPane.showInputDialog("Número da conta para saque:"));
-
+		
 		Conta conta = encontrarConta(numeroConta);
-
+		
 		if (conta != null) {
 
 			Double valorSaque = Double.parseDouble(JOptionPane.showInputDialog("Número da conta para depósito:"));
